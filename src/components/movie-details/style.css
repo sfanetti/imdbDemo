@@ -1,0 +1,153 @@
+.outer-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #000000aa;
+    display: flex;
+    position: relative;
+}
+
+.inner-container {
+    width: calc(100% - 12vw);
+    height: 80%;
+    align-self: center;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    padding-top: 0;
+}
+
+.image-container {
+    width: 100%;
+    background-color: #ededed;
+    flex: 1 1 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.no-image {
+    max-width: 25%;
+}
+
+.loading {
+    opacity: 0;
+}
+
+.scroll-container {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: #4c4c4c;
+    margin-bottom: 2rem;
+}
+
+header h2 {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+header button {
+    width: 4rem;
+    height: 4rem;
+    align-self: flex-start;
+    margin-top: 2rem;
+    border-style: solid;
+    border-radius: 100%;
+    padding: 1rem;
+    border-color: #a9a9a9;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: white;
+}
+
+header button:active {
+    background-color: #ccc;
+}
+
+header button img {
+    filter: opacity(0.5);
+}
+
+header button:hover img {
+    filter: opacity(1);
+}
+
+header button:active img{
+    filter: opacity(1);
+}
+
+section {
+    flex: 1 1 100%;
+    padding: 0 3rem;
+}
+
+section h3{
+    margin: 0;
+}
+section h4 {
+    margin: 1rem 0;
+}
+
+section dt {
+    font-weight: bold;
+}
+
+.loading-icon-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    top: calc(50% - 2rem);
+}
+
+.loading-icon-container object {
+    width: 5rem;
+    height: 5rem;
+    filter: invert(1);
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-container {
+        display: block;
+    }
+    section {
+        margin-top: 1rem;
+        padding-left: 0;
+    }
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 300ms linear infinite;
+}
+
+.hidden {
+    display: none;
+}

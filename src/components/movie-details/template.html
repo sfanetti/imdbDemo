@@ -1,0 +1,76 @@
+<template id="movie-details">
+    <div class="outer-container">
+        <div class="inner-container loading">
+            <header>
+                <h2 class="title" data-bind="title"></h2>
+                <button class="close-btn">
+                    <img src="/assets/icons/xmark-large-solid.svg" alt="Close Icon">
+                </button>
+            </header>
+            <div class="scroll-container">
+                <div class="image-container">
+                    <img data-bind="imageUrl" src="" alt="" async="true">
+                </div>
+                <section>
+                    <div class="movie-details">
+                        <h3 data-bind="title"></h3>
+                        <h4 data-bind="year"></h4>
+                    </div>
+                    <div class="release-info">
+                        <dl>
+                            <dt>Rated: </dt>
+                            <dd data-bind="rated"></dd>
+                            <dt>Release: </dt>
+                            <dd data-bind="released"></dd>
+                            <dt>Runtime: </dt>
+                            <dd data-bind="runtime"></dd>
+                            <dt>Genre: </dt>
+                            <dd data-bind="genre"></dd>
+                            <dt>Director: </dt>
+                            <dd data-bind="director"></dd>
+                        </dl>
+                        <dl>
+                            <dt>Writer: </dt>
+                            <dd data-bind="writer"></dd>
+                            <dt>Actors: </dt>
+                            <dd data-bind="actors"></dd>
+                            <dt>Language: </dt>
+                            <dd data-bind="language"></dd>
+                            <dt>Country: </dt>
+                            <dd data-bind="country"></dd>
+                            <dt>Box Office: </dt>
+                            <dd data-bind="boxOffice"></dd>
+                        </dl>
+                    </div>
+                    <p class="plot" data-bind="plot">
+        
+                    </p>
+                    <div class="accolades">
+                        <h5 data-bind="awards"></h5>
+                    </div>
+                    <div class="critic-area">
+                        <dl>
+                            <dt data-bind="ratingsSource0"></dt>
+                            <dd data-bind="ratingsValue0"></dd>
+                            <dt data-bind="ratingsSource1"></dt>
+                            <dd data-bind="ratingsValue1"></dd>
+                            <dt data-bind="ratingsSource2"></dt>
+                            <dd data-bind="ratingsValue2"></dd>
+                            <dt>MetaScore: </dt>
+                            <dd data-bind="metaScore"></dd>
+                            <dt>IMDB Rating: </dt>
+                            <dd data-bind="imdbRating"></dd>
+                            <dt>IMDB Votes: </dt>
+                            <dd data-bind="imdbVotes"></dd>
+                        </dl>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="loading-icon-container hidden">
+            <object data="/assets/icons/spinner-third-solid.svg" class="rotating" type="image/svg+xml">
+                <img src="/assets/icons/spinner-third-solid.svg"/>
+            </object>
+        </div>
+    </div>
+</template>

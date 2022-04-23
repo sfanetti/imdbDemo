@@ -1,0 +1,25 @@
+<template id="list-movies">
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="list-container" data-data >
+        
+            </div>
+            <div class="loading-icon-container hidden">
+                <object data="/assets/icons/spinner-third-solid.svg" class="rotating" type="image/svg+xml">
+                    <img src="/assets/icons/spinner-third-solid.svg"/>
+                </object>
+            </div>
+            <div class="error-container hidden">
+                <div class="error-container">
+                    <div class="error-icon">
+                        <object data="/assets/icons/circle-exclamation-solid.svg" type=""></object>
+                    </div>
+                    <div class="error-data">
+                        <h2>Error</h2>
+                        <h4 data-bind="errorMessage">Too many items</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

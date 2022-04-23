@@ -1,0 +1,139 @@
+.outer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    max-width: min(100vw, 1280px);
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.list-container {
+    overflow-y: auto;
+    border: 1px solid #FFFFFF00;
+    height: 100%;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    outline-offset: -3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+.result-info {
+    padding: 0 3rem;
+}
+
+.result-info {
+    font-size: 1.5em;
+}
+
+.movie-item {
+    width: 100%;
+    aspect-ratio: 1/1.75;
+}
+
+hr {
+    border: 1px dashed #aaa;
+    width: 100%;
+}
+
+hr {
+    grid-column: 1 / -1;
+}
+h4 {
+    grid-column: 1 / -1;
+}
+
+.loading-icon-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.loading-icon-container object {
+    width: 5rem;
+    height: 5rem;
+    filter: invert(28%) sepia(49%) saturate(2675%) hue-rotate(356deg) brightness(102%) contrast(96%);
+}
+
+.error-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.error-container object{
+    width: 5rem;
+    height: 5rem;
+    filter: invert(28%) sepia(49%) saturate(2675%) hue-rotate(356deg) brightness(102%) contrast(96%);
+}
+
+.error-data {
+    padding: 0 2rem;
+}
+
+.error-data h2 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.error-data h4 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+    .list-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+    .list-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list-container {
+        width: 100%;
+    }
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 300ms linear infinite;
+}
+
+.hidden {
+    display: none;
+}

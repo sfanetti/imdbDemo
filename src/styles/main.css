@@ -1,0 +1,84 @@
+:root {
+    --body-color: #333;
+
+    --search-background-color: #d5440c
+    --footer-background-color: #333;
+}
+
+:host {
+    --search-background-color: #d5440c
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body-color);
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    min-height: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+header {
+    flex: 0 0;
+    width: 100%;
+}
+
+
+section {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 70vw;
+    height: calc(100vh - 500px);
+    width: 100%;
+    display:flex;
+    align-self: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+main list-movies {
+    flex: 1 1 100%;
+}
+
+list-movies {
+    width: 100%;
+}
+
+movie-details {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    flex: 0 0 auto;
+    background-color: #333333;
+    color:white;
+    font-size: larger;
+    padding: 1rem 2rem;
+}
+
